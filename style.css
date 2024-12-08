@@ -1,53 +1,31 @@
-/* إعدادات الأساس */
 body {
     font-family: Arial, sans-serif;
-    background-color: #4A90E2;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background-color: #2a5d9c;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
 }
 
 .countdown-container {
-    margin-top: 50px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
-.motivation {
+.motivational-text {
     font-size: 1.5em;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
-/* العد التنازلي */
-.countdown-item {
-    font-size: 2.5em;
+#countdown {
+    font-size: 2em;
     font-weight: bold;
-    display: inline-block;
-    margin: 0 10px;
-    animation: zoomIn 1s ease-in-out;
-}
-
-@keyframes zoomIn {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.5); }
-}
-
-/* شريط التقدم */
-.progress-container {
-    width: 100%;
-    height: 20px;
-    background-color: #ddd;
-    margin-top: 20px;
-}
-
-#progress-bar {
-    height: 100%;
-    background-color: #4CAF50;
-    width: 0%;
-    transition: width 1s ease-in-out;
 }
