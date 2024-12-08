@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2a5d9c;
-    color: white;
+    background-color: #2a5d9c; /* الخلفية باللون الأزرق */
+    color: white; /* النص باللون الأبيض */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,15 +17,18 @@ body {
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    color: #fff; /* التأكد من أن العنوان باللون الأبيض */
 }
 
 .motivational-text {
     font-size: 1.5em;
     margin-bottom: 30px;
     font-weight: bold;
+    color: #ff0; /* لون النص التحفيزي باللون الأصفر */
 }
 
 #countdown {
     font-size: 2em;
     font-weight: bold;
+    color: #fff; /* التأكد من أن العد التنازلي باللون الأبيض */
 }
