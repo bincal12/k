@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #ffffff;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,15 +11,15 @@ body {
 
 .countdown-container {
     text-align: center;
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    font-size: 2rem;
 }
 
 #countdown {
@@ -29,19 +29,25 @@ h1 {
 }
 
 .time {
-    font-size: 1.5rem;
-    text-align: center;
-    
- .message {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #ffcc00;
-    font-weight: bold;
-}
-
+    font-size: 1.2rem;
 }
 
 .time span {
     font-size: 3rem;
     font-weight: bold;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    animation: pulse 1s infinite; /* إضافة حركة تحفيزية */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
