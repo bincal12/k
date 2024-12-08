@@ -1,32 +1,32 @@
-// حدد التاريخ المستهدف بشكل دقيق مع الوقت
-const targetDate = new Date("2025-01-20T00:00:00").getTime();
+// Set the target date (make sure to adjust this to your desired target)
+const targetDate = new Date("2025-01-20T00:00:00Z").getTime();
 
-// دالة التحديث
+// Update the countdown every second
 function updateCountdown() {
-    const now = new Date().getTime(); // الحصول على الوقت الحالي
-    const difference = targetDate - now; // حساب الفرق بين الوقت الحالي والتاريخ المستهدف
+    const now = new Date().getTime(); // Get current time
+    const difference = targetDate - now; // Calculate the difference
 
-    // إذا كان الوقت المستهدف قد مر بالفعل
+    // If the countdown reaches zero
     if (difference <= 0) {
         document.getElementById("countdown").innerHTML = "<h2>The event has started!</h2>";
-        return; // إنهاء الدالة إذا انتهى العد التنازلي
+        return; // Stop the countdown
     }
 
-    // حساب الأيام والساعات والدقائق والثواني
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24)); // الأيام
-    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // الساعات
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)); // الدقائق
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000); // الثواني
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    // تحديث القيم في الصفحة
+    // Update the countdown elements
     document.getElementById("days").textContent = days;
     document.getElementById("hours").textContent = hours;
     document.getElementById("minutes").textContent = minutes;
     document.getElementById("seconds").textContent = seconds;
 }
 
-// تحديث العد التنازلي كل ثانية
+// Run the function every second
 setInterval(updateCountdown, 1000);
 
-// تشغيل الدالة عند تحميل الصفحة
+// Initial call to update the countdown immediately
 updateCountdown();
