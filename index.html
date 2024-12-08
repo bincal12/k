@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="countdown-container">
         <h1>Countdown to the Event</h1>
-        <p class="emoji">🚀💪 زير راسك ما بقاش بزاف 🔥🔥</p>
+        <p class="motivation">🚀 زير راسك ما بقاش بزاف 🔥🔥</p>
         <div id="countdown">
-            <div class="time">
-                <span id="days">0</span> <span>Days</span>
-            </div>
-            <div class="time">
-                <span id="hours">0</span> <span>Hours</span>
-            </div>
-            <div class="time">
-                <span id="minutes">0</span> <span>Minutes</span>
-            </div>
-            <div class="time">
-                <span id="seconds">0</span> <span>Seconds</span>
-            </div>
+            <div id="days" class="countdown-item">0</div> أيام
+            <div id="hours" class="countdown-item">0</div> ساعات
+            <div id="minutes" class="countdown-item">0</div> دقائق
+            <div id="seconds" class="countdown-item">0</div> ثواني
+        </div>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
