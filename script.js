@@ -1,11 +1,11 @@
-const targetDate = new Date("January 20, 2025 00:00:00").getTime();
+const targetDate = new Date("2025-01-20T00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
     const difference = targetDate - now;
 
     if (difference <= 0) {
-        document.getElementById("countdown").innerHTML = "<h2>The countdown is over!</h2>";
+        document.getElementById("countdown").innerHTML = "<h2>The event has started!</h2>";
         return;
     }
 
